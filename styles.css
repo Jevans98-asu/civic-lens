@@ -53,6 +53,12 @@ body.dark-mode {
 }
 
 /* ///ADD/// Navigation Styles */
+header {
+  background-color: var(--blue-bulletin);
+  color: var(--watchdog-white);
+  margin-bottom: 2rem;
+}
+
 #menu-button {
   display: inline-block;
   padding: 0.5rem 1rem;
@@ -92,22 +98,25 @@ body.dark-mode {
 }
 
 /* ///ADD/// Global Layout Styles */
+section {
+  margin-bottom: 2rem; 
+}
+
+#intro blockquote.tagline {
+  margin-top: 1rem;
+}
+
+/* ///ADD/// Global Text Styles */
 body {
   font-family: var(--font-body);
   background-color: var(--watchdog-white);
   color: var(--truth-text);
-  padding: 1rem;
+  line-height: 1.5;
 }
 
-header {
-  background-color: var(--blue-bulletin);
-  margin-bottom: 2rem;
+#intro blockquote.tagline {
+  
 }
-
-
-
-/* ///ADD/// Global Text Styles */
-
 
 /* ///ADD/// medium styles 620px */
 @media screen and (min-width: 620px) {
