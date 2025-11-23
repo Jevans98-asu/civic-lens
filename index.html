@@ -57,109 +57,160 @@
   </nav>
 
   <main id="main-content">
-    <h2>Welcome to Civic Lens</h2>
-    <p>We are an independent news organization dedicated to unbiased reporting, investigative journalism, and truth-driven storytelling. At Civic Lens, our mission is to expose the facts, amplify marginalized voices, and shine light on the systems that shape our society.</p>
-    <blockquote class="tagline">“We don't follow the narrative. We follow the facts.”</blockquote>
+    <section id="intro">
+      <h2>Welcome to Civic Lens</h2>
+      <p>We are an independent news organization dedicated to unbiased reporting, investigative journalism, and
+        truth-driven storytelling. At Civic Lens, our mission is to expose the facts, amplify marginalized voices, and
+        shine light on the systems that shape our society.</p>
+      <blockquote class="tagline">“We don't follow the narrative. We follow the facts.”</blockquote>
+    </section>
 
-    <h2 id="breaking-news">Breaking News</h2>
+    <section id="breaking-news">
+      <h2>Breaking News</h2>
+      <article>
+        <h3>Federal Investigation Launched into Water Mismanagement in the Southwest</h3>
+        <p>The Department of Justice has announced a full investigation into decades of water distribution practices
+          affecting tribal lands and rural communities.</p>
+        <video src="videos/water-management.mp4" controls></video>
+      </article>
+      <article>
+        <h3>New Voting Rights Bill Sparks Nationwide Debate</h3>
+        <p>Civil rights advocates argue that the bill disenfranchises thousands of voters and potential voters of color
+          and
+          those in rural areas of the country.</p>
+        <video src="videos/voter-suppression.mp4" controls></video>
+      </article>
+    </section>
 
-    <h3>Federal Investigation Launched into Water Mismanagement in the Southwest</h3>
+    <section id="featured-aticles">
+      <h2 id="featured-aticles">Featured Articles</h2>
 
-    <p>The Department of Justice has announced a full investigation into decades of water distribution practices affecting tribal lands and rural communities.</p>
-    videos/water-management.mp4
+      <article>
+        <h3>The Cost of Silence: Whistleblower Stories from Inside Tech Giants</h3>
+        <p>Former employees speak out about ethical breaches in data privacy and surveillance.</p>
+      </article>
 
-    <h3>New Voting Rights Bill Sparks Nationwide Debate</h3>
-    <p>Civil rights advocates argue that the bill disenfranchises thousands of voters and potential voters of color and those in rural areas of the country.</p>
-    videos/voter-suppression.mp4
+      <article>
+        <h3>Unequal Justice: How Bail Systems Harm the Poor</h3>
+        <p>An investigative series on cash bail and its disproportionate impact.</p>
+      </article>
 
-    <h2 id="featured-aticles">Featured Articles</h2>
+      <article>
+        <h3>Invisible Work: The Lives of Migrant Caregivers</h3>
+        <p>Humanizing the labor that keeps households and economies afloat.</p>
+      </article>
 
-    <h3>The Cost of Silence: Whistleblower Stories from Inside Tech Giants</h3>
-    <p>Former employees speak out about ethical breaches in data privacy and surveillance.</p>
+      <article>
+        <h3>Redlined Still: A New Map of Modern-Day Housing Discrimination</h3>
+        <p>Data visualization showing systemic inequality in real estate today.</p>
+      </article>
 
-    <h3>Unequal Justice: How Bail Systems Harm the Poor</h3>
-    <p>An investigative series on cash bail and its disproportionate impact.</p>
+      <article>
+        <h3>Climate Injustice: Who Pays for Pollution?</h3>
+        <p>Communities of color bear the brunt of environmental damage.</p>
+      </article>
 
-    <h3>Invisible Work: The Lives of Migrant Caregivers</h3>
-    <p>Humanizing the labor that keeps households and economies afloat.</p>
+      <article>
+        <h3>Teaching Under Fire: The Fight for Inclusive Education</h3>
+        <p>Teachers navigate book bans, curriculum restrictions, and culture wars.</p>
+      </article>
 
-    <h3>Redlined Still: A New Map of Modern-Day Housing Discrimination</h3>
-    <p>Data visualization showing systemic inequality in real estate today.</p>
+      <article>
+        <h3>Food Deserts and Corporate Abandonment</h3>
+        <p>Why access to nutrition is a zip code lottery.</p>
+      </article>
 
-    <h3>Climate Injustice: Who Pays for Pollution?</h3>
-    <p>Communities of color bear the brunt of environmental damage.</p>
+      <article>
+        <h3>Policing Mental Health: A Broken Response System</h3>
+        <p>Examining police interactions with those in crisis.</p>
+      </article>
 
-    <h3>Teaching Under Fire: The Fight for Inclusive Education</h3>
-    <p>Teachers navigate book bans, curriculum restrictions, and culture wars.</p>
+      <article>
+        <h3>The Disinformation Economy</h3>
+        <p>Tracing profit motives behind fake news empires.</p>
+      </article>
 
-    <h3>Food Deserts and Corporate Abandonment</h3>
-    <p>Why access to nutrition is a zip code lottery.</p>
+      <article>
+        <h3>Facing the Algorithm: AI and Racial Bias</h3>
+        <p>The coded inequalities that shape our lives.</p>
+      </article>
 
-    <h3>Policing Mental Health: A Broken Response System</h3>
-    <p>Examining police interactions with those in crisis.</p>
+      <article>
+        <h3>The Voting Maze</h3>
+        <p>A guide to understanding your rights amid changing laws.</p>
+      </article>
 
-    <h3>The Disinformation Economy</h3>
-    <p>Tracing profit motives behind fake news empires.</p>
+      <article>
+        <h3>After the Cameras Leave: Long-Term Crisis Recovery</h3>
+        <p>Rebuilding trust and infrastructure in disaster-hit communities.</p>
+      </article>
+    </section>
 
-    <h3>Facing the Algorithm: AI and Racial Bias</h3>
-    <p>The coded inequalities that shape our lives.</p>
+    <section id="alerts">
+      <h2>Stay Informed. Stay Empowered.</h2>
+      <p>Receive text messages with the news you want to know.</p>
+      <form class="news-form" method="post" action="https://wp.zybooks.com/form-viewer.php">
 
-    <h3>The Voting Maze</h3>
-    <p>A guide to understanding your rights amid changing laws.</p>
+        <label for="subscriber-name">Name</label>
+        <input type="text" id="subscriber-name" name="subscriber-name" required>
 
-    <h3>After the Cameras Leave: Long-Term Crisis Recovery</h3>
-    <p>Rebuilding trust and infrastructure in disaster-hit communities.</p>
+        <label for="subscriber-mobile">Mobile</label>
+        <input type="tel" id="subscriber-mobile" name="subscriber-mobile" required>
 
+        <fieldset>
+          <legend>Notification Preferences</legend>
+          <input type="checkbox" id="breaking-topic" name="notifications" value="breaking-topic">
+          <label for="breaking-topic">Breaking News</label>
+          <input type="checkbox" id="politics-topic" name="notifications" value="politics-topic">
+          <label for="politics-topic">Politics</label>
+          <input type="checkbox" id="weather-topic" name="notifications" value="weather-topic">
+          <label for="weather-topic">Weather</label>
+          <input type="checkbox" id="sports-topic" name="notifications" value="sports-topic">
+          <label for="sports-topic">Sports</label>
+          <input type="checkbox" id="entertainment-topic" name="notifications" value="entertainment-topic">
+          <label for="entertainment-topic">Entertainment</label>
+          <input type="checkbox" id="world-topic" name="notifications" value="world-topic">
+          <label for="world-topic">World</label>
+          <input type="checkbox" id="financial-topic" name="notifications" value="financial-topic">
+          <label for="financial-topic">Financial</label>
+        </fieldset>
 
-    <h2 id="informed-empowered">Stay Informed. Stay Empowered.</h2>
-    Receive text messages with the news you want to know.
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+  </main>
 
-    Name
-
-    Mobile
-
-    Notification Preferences
-
-    Breaking News
-    Politics
-    Weather
-    Sports
-    Entertainment
-    World
-    Financial
-
-    Subscribe
-
+  <footer>
     <h2>Follow Us</h2>
-    Twitter/X
-    Instagram
-    YouTube
-    TikTok
-    LinkedIn
+    <a href="#">Twitter/X</a>
+    <a href="#">Instagram</a>
+    <a href="#">YouTube</a>
+    <a href="#">TikTok</a>
+    <a href="#">LinkedIn</a>
+  </footer>
+  <small>&copy; 2025 Civic Lens. All rights reserved.</small>
 
-    <small>&copy; 2025 Civic Lens. All rights reserved.</small>
 
+  <script>
+    const toggleButton = document.getElementById('theme-toggle');
 
-    <script>
-      const toggleButton = document.getElementById('theme-toggle');
+    toggleButton.addEventListener('click', () => {
+      const body = document.body;
 
-      toggleButton.addEventListener('click', () => {
-        const body = document.body;
-
-        // Toggle manually between light and dark mode
-        if (body.classList.contains('dark-mode')) {
-          body.classList.remove('dark-mode');
-          body.classList.add('light-mode');
-        } else if (body.classList.contains('light-mode')) {
-          body.classList.remove('light-mode');
-          body.classList.add('dark-mode');
-        } else {
-          // No class set yet, determine system preference
-          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-          body.classList.add(prefersDark ? 'light-mode' : 'dark-mode');
-        }
-      });
-    </script>
+      // Toggle manually between light and dark mode
+      if (body.classList.contains('dark-mode')) {
+        body.classList.remove('dark-mode');
+        body.classList.add('light-mode');
+      } else if (body.classList.contains('light-mode')) {
+        body.classList.remove('light-mode');
+        body.classList.add('dark-mode');
+      } else {
+        // No class set yet, determine system preference
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        body.classList.add(prefersDark ? 'light-mode' : 'dark-mode');
+      }
+    });
+  </script>
 </body>
 
 </html>
