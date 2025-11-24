@@ -150,13 +150,14 @@
             <p>Receive text messages with the news you want to know.</p>
 
             <form class="news-form" method="post" action="https://wp.zybooks.com/form-viewer.php">
-
-                <label for="subscriber-name">Name</label>
-                <input type="text" id="subscriber-name" name="subscriber-name" required>
-
-                <label for="subscriber-mobile">Mobile</label>
-                <input type="tel" id="subscriber-mobile" name="subscriber-mobile" required>
-
+                <div class="form-field">
+                    <label for="subscriber-name">Name</label>
+                    <input type="text" id="subscriber-name" name="subscriber-name" required>
+                </div>
+                <div class="form-field">
+                    <label for="subscriber-mobile">Mobile</label>
+                    <input type="tel" id="subscriber-mobile" name="subscriber-mobile" required>
+                </div>
                 <fieldset>
                     <legend>Notification Preferences</legend>
 
@@ -181,7 +182,8 @@
                     </label>
 
                     <label>
-                        <input type="checkbox" id="entertainment-topic" name="notifications" value="entertainment-topic">
+                        <input type="checkbox" id="entertainment-topic" name="notifications"
+                            value="entertainment-topic">
                         Entertainment
                     </label>
 
