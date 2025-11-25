@@ -82,6 +82,7 @@ header {
     margin-top: .5rem;
     padding: 0.5rem 0.75rem;
     font-weight: 600;
+    font-variation-settings: "wght" 600;
     text-transform: uppercase;
     text-align: center;
     background-color: var(--news-flash);
@@ -105,10 +106,10 @@ header {
     display: block;
     width: 100%;
     font-weight: 600;
+    font-variation-settings: "wght" 600;
     text-decoration: none;
     text-transform: uppercase;
     background-color: var(--news-flash);
-    font-weight: 600;
     text-align: center;
     color: var(--watchdog-white);
     padding: 0.5rem 0;
@@ -133,6 +134,7 @@ main {
 #intro p,
 #alerts p {
     font-weight: 300;
+    font-variation-settings: "wght" 300;
     padding-top: .25rem;
     letter-spacing: .025em;
 }
@@ -255,6 +257,7 @@ footer h2 {
     font-family: var(--font-heading);
     font-size: 1.5rem;
     font-weight: 500;
+    font-variation-settings: "wght" 500;
     margin-top: 1rem;
 }
 
@@ -272,6 +275,7 @@ footer li a {
     color: var(--watchdog-white);
     font-size: 0.85rem;
     font-weight: 600;
+    font-variation-settings: "wght" 600;
     text-decoration: none;
     text-transform: uppercase;
     transition: var(--transition);
@@ -291,10 +295,10 @@ footer small {
 }
 
 .wrapper-content {
-        max-width: 1024px;
-        margin: 0 auto;
-        padding: 0 1rem;
-    }
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
 
 /* ///ADD/// Global Text Styles */
 body {
@@ -312,18 +316,21 @@ h3 {
 h1 {
     font-size: 3rem;
     font-weight: 300;
+    font-variation-settings: "wght" 300;
     margin-bottom: 0.25rem;
 }
 
 h2 {
     font-size: 1.5rem;
     font-weight: 200;
+    font-variation-settings: "wght" 200;
     padding-bottom: .5rem;
 }
 
 h3 {
     font-size: 1.25rem;
     font-weight: 200;
+    font-variation-settings: "wght" 200;
     line-height: 1.75rem;
     margin: 0 0 0.75rem;
     padding-bottom: 0.5rem;
@@ -400,6 +407,7 @@ ul {
         background-color: var(--news-flash);
         color: var(--watchdog-white);
         font-weight: 600;
+        font-variation-settings: "wght" 600;
         text-transform: uppercase;
         text-decoration: none;
     }
@@ -475,10 +483,6 @@ ul {
         grid-column: 1 / -1;
         width: 100%;
     }
-
-    .wrapper-content {
-        padding: 0 1rem;
-    }
 }
 
 /* ///ADD/// large styles 920px */
@@ -510,7 +514,7 @@ ul {
 /* ///ADD/// x-large styles 1024px */
 @media (min-width: 1024px) {
 
-     main {
+    main {
         padding-left: 1rem;
         padding-right: 1rem;
     }
