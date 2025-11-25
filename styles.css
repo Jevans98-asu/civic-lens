@@ -103,42 +103,50 @@ header {
 
 .menu a {
     display: block;
+    width: 100%;
     font-weight: 600;
-    font-size: 1rem;
     text-decoration: none;
     text-transform: uppercase;
+    background-color: var(--news-flash);
+    font-weight: 600;
+    text-align: center;
     color: var(--watchdog-white);
-    padding: 0.25rem 0;
+    padding: 0.5rem 0;
+    transition: var(--transition);
+    border: 1px solid var(--blue-bulletin);
 }
 
 .menu a:hover,
 .menu a:focus-visible {
-    border: 1px solid var(--news-flash);
+    background-color: var(--blue-bulletin);
+    border: .5px solid var(--news-flash);
 }
 
 /* ///ADD/// Global Layout Styles */
 
 main {
-    max-width: 1100px;
+    max-width: 1024px;
     margin: 0 auto;
-    padding: 1.5rem 1rem 2rem;
+    padding: 1.5rem 2rem 2rem;
 }
 
-#intro p, #alerts p {
+#intro p,
+#alerts p {
     font-weight: 300;
     padding-top: .25rem;
     letter-spacing: .025em;
 }
 
 /* BREAKING NEWS MOBILE */
-#breaking-news, #featured-articles {
+#breaking-news,
+#featured-articles {
     margin-top: 2rem;
 }
 
 #breaking-news article {
     border: 1px solid var(--blue-bulletin);
     padding: 1rem;
-    margin: 1rem;
+    margin: .5rem;
     background-color: var(--news-flash);
     box-shadow: var(--shadow);
     color: var(--watchdog-white);
@@ -239,15 +247,15 @@ main {
 footer {
     background-color: var(--blue-bulletin);
     color: var(--watchdog-white);
-    padding: 2.5rem 1.5rem;
+    padding: 1rem;
     text-align: left;
 }
 
 footer h2 {
     font-family: var(--font-heading);
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 500;
-    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 footer ul {
@@ -265,15 +273,28 @@ footer li a {
     font-size: 0.85rem;
     font-weight: 600;
     text-decoration: none;
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+
+footer a:hover,
+footer a:focus-visible {
+    background-color: var(--blue-bulletin);
+    border: .5px solid var(--news-flash);
 }
 
 footer small {
     display: block;
-    font-size: 0.8rem;
     color: var(--watchdog-white);
     margin-top: 1rem;
-    opacity: 0.9;
+    text-align: center;
 }
+
+.wrapper-content {
+        max-width: 1024px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
 
 /* ///ADD/// Global Text Styles */
 body {
@@ -289,7 +310,7 @@ h3 {
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 300;
     margin-bottom: 0.25rem;
 }
@@ -359,17 +380,13 @@ ul {
         display: none;
     }
 
-    header {
-        padding: 1.5rem 2rem;
-    }
-
     .mobile-nav {
         margin-top: 1rem;
     }
 
     .menu {
         display: flex;
-        gap: 1.5rem;
+        gap: 1rem;
         margin-top: 0.75rem;
     }
 
@@ -397,7 +414,6 @@ ul {
     #breaking-news {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 2rem;
     }
 
     #breaking-news>h2 {
@@ -459,10 +475,18 @@ ul {
         grid-column: 1 / -1;
         width: 100%;
     }
+
+    .wrapper-content {
+        padding: 0 1rem;
+    }
 }
 
 /* ///ADD/// large styles 920px */
 @media (min-width: 920px) {
+
+    #featured-articles {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
 
     #alerts .form-field:nth-child(1) {
         grid-column: 1 / 2;
@@ -484,7 +508,14 @@ ul {
 }
 
 /* ///ADD/// x-large styles 1024px */
-@media (min-width: 1024px) {}
+@media (min-width: 1024px) {
+
+     main {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+}
 
 /* ///ADD/// Interaction Queries for color scheme light and dark and motion preference */
 
@@ -512,13 +543,13 @@ ul {
 /* ///ADD///  Feature Query for :has() that checks if the #menu-toggle is checked */
 @supports (selector(:has(*))) {
 
-      article {
-    transition: var(--transition);
-  }
+    article {
+        transition: var(--transition);
+    }
 
-  /* Slight scale-up on hover */
-  article:hover {
-    transform: scale(1.02);
-  }
+    /* Slight scale-up on hover */
+    article:hover {
+        transform: scale(1.05);
+    }
 
 }
