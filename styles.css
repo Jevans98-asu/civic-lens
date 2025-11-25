@@ -76,30 +76,20 @@ header {
     position: relative;
 }
 
-h1 {
-    font-family: var(--font-heading);
-    font-size: 2rem;
-    margin: 0;
-}
-
-.tagline {
-    font-size: 0.9rem;
-    font-family: var(--font-body);
-}
-
 .menu-button {
-    display: inline-block;
+    display: block;
+    width: 100%;
+    margin-top: .5rem;
     padding: 0.5rem 0.75rem;
-    font-family: var(--font-body);
     font-weight: 600;
-    font-size: 0.95rem;
+    text-transform: uppercase;
+    text-align: center;
     background-color: var(--news-flash);
     color: var(--watchdog-white);
     cursor: pointer;
 }
 
 .menu {
-    list-style: none;
     margin-top: 0.75rem;
 }
 
@@ -113,40 +103,46 @@ h1 {
 
 .menu a {
     display: block;
-    font-family: var(--font-body);
     font-weight: 600;
     font-size: 1rem;
     text-decoration: none;
+    text-transform: uppercase;
     color: var(--watchdog-white);
     padding: 0.25rem 0;
-    transition: var(--transition);
 }
 
 .menu a:hover,
 .menu a:focus-visible {
-    color: var(--watchdog-white);
-    text-decoration: underline;
+    border: 1px solid var(--news-flash);
 }
 
 /* ///ADD/// Global Layout Styles */
-body {
-    font-family: var(--font-body);
-}
 
 main {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 1.5rem 1rem 3rem;
+    padding: 1.5rem 1rem 2rem;
+}
+
+#intro p, #alerts p {
+    font-weight: 300;
+    padding-top: .25rem;
+    letter-spacing: .025em;
 }
 
 /* BREAKING NEWS MOBILE */
+#breaking-news, #featured-articles {
+    margin-top: 2rem;
+}
+
 #breaking-news article {
-    border: 1px solid var(--story-subtitle);
+    border: 1px solid var(--blue-bulletin);
     padding: 1rem;
-    margin-bottom: 2rem;
+    margin: 1rem;
     background-color: var(--news-flash);
     box-shadow: var(--shadow);
     color: var(--watchdog-white);
+    cursor: pointer;
 }
 
 #breaking-news article h3 {
@@ -176,16 +172,14 @@ main {
 }
 
 #featured-articles article {
+    border: 1px solid var(--blue-bulletin);
     padding: 1rem 1.25rem;
     margin-bottom: 1rem;
     box-shadow: var(--shadow);
+    cursor: pointer;
 }
 
 /* ALERTS MOBILE */
-#alerts {
-    margin-top: 2.5rem;
-}
-
 #alerts form {
     margin-top: 0.75rem;
     background-color: var(--news-flash);
@@ -204,7 +198,6 @@ main {
     border: none;
     background-color: var(--watchdog-white);
     color: var(--truth-text);
-    font-family: var(--font-body);
     font-size: 0.9rem;
 }
 
@@ -221,7 +214,6 @@ main {
 #alerts form legend {
     font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
 }
 
 #alerts form fieldset label {
@@ -237,7 +229,6 @@ main {
     border: none;
     background-color: var(--blue-bulletin);
     color: var(--watchdog-white);
-    font-family: var(--font-body);
     font-size: 1rem;
     text-transform: uppercase;
     cursor: pointer;
@@ -249,7 +240,6 @@ footer {
     background-color: var(--blue-bulletin);
     color: var(--watchdog-white);
     padding: 2.5rem 1.5rem;
-    margin-top: 4rem;
     text-align: left;
 }
 
@@ -261,8 +251,6 @@ footer h2 {
 }
 
 footer ul {
-    list-style: none;
-    padding: 0;
     margin: 0 0 1.75rem 0;
     display: flex;
     flex-wrap: wrap;
@@ -274,16 +262,9 @@ footer li a {
     padding: 0.4rem 0.75rem;
     background-color: var(--news-flash);
     color: var(--watchdog-white);
-    font-family: var(--font-body);
     font-size: 0.85rem;
     font-weight: 600;
     text-decoration: none;
-    border-radius: 0;
-    transition: var(--transition);
-}
-
-footer li a:hover {
-    opacity: 0.85;
 }
 
 footer small {
@@ -300,16 +281,11 @@ body {
     color: var(--truth-text);
 }
 
-article {
-    border: 1px solid var(--story-subtitle);
-}
-
 h1,
 h2,
 h3 {
     font-family: var(--font-heading);
     font-variation-settings: "wdth" 110;
-
 }
 
 h1 {
@@ -321,7 +297,7 @@ h1 {
 h2 {
     font-size: 1.5rem;
     font-weight: 200;
-    margin: 2rem 0 1rem;
+    padding-bottom: .5rem;
 }
 
 h3 {
@@ -354,36 +330,32 @@ blockquote.tagline {
     padding: 0;
 }
 
+p.tagline {
+    font-family: var(--font-heading);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.1rem;
+    font-variation-settings: "wdth" 75, "wght" 600;
+}
+
 ul {
     list-style: none;
     padding-left: 0;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
-    transition: var(--transition);
-}
-
-a:hover {
-    color: var(--news-flash);
-}
-
 /* ///ADD/// medium styles 620px */
 @media (min-width: 620px) {
+
+    #menu-toggle {
+        display: none;
+    }
 
     #menu-toggle:not(:checked)~.menu,
     #menu-toggle:checked~.menu {
         display: flex;
-        gap: 1rem;
-        margin-top: 0.75rem;
     }
 
     .menu-button {
-        display: none;
-    }
-
-    #menu-toggle {
         display: none;
     }
 
@@ -410,21 +382,15 @@ a:hover {
         padding: 0.5rem;
         background-color: var(--news-flash);
         color: var(--watchdog-white);
-        font-family: var(--font-body);
         font-weight: 600;
         text-transform: uppercase;
         text-decoration: none;
-        transition: var(--transition);
     }
 
     .menu a:hover,
     .menu a:focus-visible {
-        background-color: var(--story-subtitle);
-        color: var(--watchdog-white);
-    }
-
-    main {
-        padding: 2rem 2rem 3rem;
+        background-color: var(--blue-bulletin);
+        border: 1px solid var(--news-flash);
     }
 
     /* BREAKING NEWS MED */
@@ -459,16 +425,14 @@ a:hover {
 
     /* ALERTS MED */
     #alerts {
-        max-width: 640px;
         margin-left: auto;
         margin-right: auto;
+        width: 100%;
     }
 
     #alerts form {
-        display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        column-gap: 1.5rem;
-        row-gap: 1.25rem;
+        gap: 1.25rem;
     }
 
     #alerts form .form-field {
@@ -489,15 +453,6 @@ a:hover {
         grid-column: 1 / -1;
         margin-bottom: 0.75rem;
         font-size: 0.8rem;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-    }
-
-    #alerts form fieldset label {
-        display: flex;
-        align-items: center;
-        gap: 0.35rem;
-        margin-bottom: 0.25rem;
     }
 
     #alerts form button[type="submit"] {
@@ -509,69 +464,61 @@ a:hover {
 /* ///ADD/// large styles 920px */
 @media (min-width: 920px) {
 
-    main {
-        padding: 3rem 2rem 4rem;
+    #alerts .form-field:nth-child(1) {
+        grid-column: 1 / 2;
     }
 
-    header {
-        padding: 2rem 2rem 1.5rem;
+    #alerts .form-field:nth-child(2) {
+        grid-column: 2 / 3;
     }
 
-    #featured-articles {
+    #alerts form fieldset {
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 2rem;
     }
 
-    #alerts {
-        display: flex;
-        align-items: flex-start;
-        gap: 2rem;
-        max-width: 900px;
-    }
-
-    #alerts p {
-        max-width: 22rem;
-    }
-
-    #alerts form {
-        flex: 1;
-    }
-
-    footer {
-        padding: 3rem 2rem;
+    #alerts button[type="submit"] {
+        grid-column: 1 / -1;
+        width: 100%;
     }
 
 }
 
 /* ///ADD/// x-large styles 1024px */
-@media (min-width: 1024px) {
-
-    main {
-        max-width: 1100px;
-        padding: 3rem 0 4rem;
-    }
-
-    header {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    footer {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .menu {
-        gap: 2rem;
-    }
-}
+@media (min-width: 1024px) {}
 
 /* ///ADD/// Interaction Queries for color scheme light and dark and motion preference */
 
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: var(--watchdog-white);
+        color: var(--truth-text);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--truth-text);
+        color: var(--watchdog-white);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none;
+        animation: none;
+    }
+}
 
 /* ///ADD///  Feature Query for :has() that checks if the #menu-toggle is checked */
-@supports (selector(:has(*))) {}
+@supports (selector(:has(*))) {
+
+      article {
+    transition: var(--transition);
+  }
+
+  /* Slight scale-up on hover */
+  article:hover {
+    transform: scale(1.02);
+  }
+
+}
